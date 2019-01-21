@@ -279,7 +279,7 @@
   main = async function() {
     var browser, errorMessage, page, printErrors, response, test;
     browser = (await puppeteer.launch({
-      args: ['--no-sandbox']
+      args: ['--no-sandbox', '--disable-dev-shm-usage']
     }));
     page = (await browser.newPage());
     page.on('requestfailed', function(request) {
